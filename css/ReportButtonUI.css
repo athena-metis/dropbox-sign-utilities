@@ -1,0 +1,5 @@
+#uo-dbx-sign-utils-extension-container input {
+    height: auto;
+    padding: 0 0.5em !important;
+    margin-bottom: var(--spacing__base_unit) !important;
+}

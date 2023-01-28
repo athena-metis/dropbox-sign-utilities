@@ -1,0 +1,36 @@
+
+{
+    "manifest_version": 3,
+    "name": "Unofficial Dropbox Sign Utilities",
+    "description": "Provides additional usability enhancements to Dropbox Sign",
+    "version": "1.0",
+    "author": "athena-metis@pobox.com",
+    "icons": {
+        "64": "images/icon-64.png"
+    },
+    "action": {
+      "default_popup": "popup/info.html",
+      "default_icon": "images/icon-64.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://app.hellosign.com/*"],
+            "js": [
+                "scripts/Cache.js"
+                , "scripts/DropboxSign.js"
+                , "scripts/_DataProcessingUtils.js"
+                , "scripts/_UIHelpers.js"
+                , "scripts/_ReportButtonUI.js"
+                , "scripts/init.js"
+            ],
+            "css": ["css/ReportButtonUI.css"]
+        }
+    ],
+    "permissions": [
+        "scripting",
+        "webRequest"
+    ],
+    "host_permissions": [
+        "https://app.hellosign.com/"
+    ]
+  }
